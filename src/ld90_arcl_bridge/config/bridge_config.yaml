@@ -1,0 +1,16 @@
+ld90_bridge:
+  ros__parameters:
+    arcl:
+      host: "127.0.0.1"   # <-- for simulation (fake ARCL). Change to LD90 IP for real robot.
+      port: 7260
+      password: "ld90"    # set actual ARCL password for real robot
+    topics:
+      cmd_vel: "/cmd_vel"
+      odom: "/odom"
+      status: "/ld90/status"
+    frames:
+      odom_frame: "odom"
+      base_frame: "base_link"
+    publish_tf: true
+    cmd_rate_hz: 10.0
+    reconnect_sec: 3.0
